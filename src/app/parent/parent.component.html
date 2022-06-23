@@ -1,0 +1,17 @@
+<div class="component">
+    <div class="flex mb-4">
+        <button class="blue" (click)="updatePlus()">Add Number</button>
+        <button class="blue" (click)="updateMinus()">Minus Number</button>
+        <button class="blue" (click)="updateReference()">Update Reference</button>
+        <button class="blue" (click)="resetReference()">Reset Number</button>
+    </div>
+    <button [ngClass]="{'green' : person.age > 18}">Parent => Number : {{person.age}}</button>
+    <div class="flex">
+        <div>
+            <child-1 [person]="person" (update)="updatePlus()"></child-1>
+        </div>
+        <div>
+            <child-2 [person]="person" (update)="updateMinus()"></child-2>
+        </div>
+    </div>
+</div>

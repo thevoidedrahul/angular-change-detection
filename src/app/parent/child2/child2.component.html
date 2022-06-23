@@ -1,0 +1,25 @@
+<div class="component">
+    <button [ngClass]="{'green' : person.age > 18}"> Child On Push => Number : {{person.age}}</button>
+
+    <div class="flex normal">
+        <button class="blue" (click)="markForCheck"> Mark for check</button>
+        <button class="blue" (click)="detectChanges()">Detect changes</button>
+        <button class="blue" (click)="detach()">Detach</button>
+        <button class="blue" (click)="reAttach()">ReAttach</button>
+        <button class="blue" (click)="checkNoChanges()">Check No Changes</button>
+    </div>
+    <div class="flex">
+        <div>
+            <sub-child-1 [person]="person" (update)="update.emit();">
+            </sub-child-1>
+        </div>
+        <div>
+            <sub-child-2 [person]="person" (update)="update.emit();">
+            </sub-child-2>
+        </div>
+        <div>
+            <sub-child-3 [person]="person" (update)="update.emit();">
+            </sub-child-3>
+        </div>
+    </div>
+</div>

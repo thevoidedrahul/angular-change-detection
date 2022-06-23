@@ -1,0 +1,13 @@
+<div class="component">
+    <button [ngClass]="{'green' : person.age > 18}"> Child on Default => Number : {{person.age}}</button>
+    <div class="flex">
+        <div>
+            <sub-child-1 [person]="person" (update)="update.emit();">
+            </sub-child-1>
+        </div>
+        <div>
+            <sub-child-2 [person]="person" (update)="update.emit();">
+            </sub-child-2>
+        </div>
+    </div>
+</div>
